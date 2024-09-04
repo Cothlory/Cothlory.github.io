@@ -9,13 +9,13 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.3.3"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", github: "jekyll/minima", ref: "009aa8417f2908e7013c6e04ed322939eb6356c0" # "~> 2.5"
+gem "minima", github: "jekyll/minima", ref: "009aa8417f2908e7013c6e04ed322939eb6356c0"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
   gem 'jekyll-toc'
 end
 

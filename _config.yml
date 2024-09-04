@@ -71,4 +71,12 @@ minima:
   #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
   #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
-
+exclude:
+  - LICENSE
+  - '**/LICENSE*'
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .git/
+  - .github/
+  - '**/*.yml'

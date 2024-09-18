@@ -1,3 +1,3 @@
-[submodule "game/flaggie"]
-	path = game/flaggie
+[submodule "games/flaggie"]
+	path = games/flaggie
 	url = https://github.com/Cothlory/flaggie.git

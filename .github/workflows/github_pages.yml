@@ -1,0 +1,59 @@
+name: Build and deploy to Pages
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.JEKYLL_PAT }}
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        id: setup-ruby
+        with:
+          ruby-version: 3.1.6
+          bundler-cache: true
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Add development binaries to PATH
+        run: |
+          echo "$GITHUB_WORKSPACE/bin-dev" >> $GITHUB_PATH
+
+      - name: Jekyll build
+        run: bundle exec jekyll build --verbose --trace --profile --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          GITHUB_RUN_ID: ${{ github.run_id }}
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

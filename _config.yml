@@ -5,6 +5,8 @@ author:
   name: Cothlory
   email: cothlory@proton.me
 
+url: https://Cothlory.github.io
+
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 license: "[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)"

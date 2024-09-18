@@ -1,5 +1,6 @@
 require 'nokogiri'
 
+# This module is licensed under MIT License, (c) 2023 Ulysses Zhan
 module Jekyll::UlyssesZhan
 	@markdown_snippet_cache = {}
 	def self.markdown_snippet_cache
@@ -7,15 +8,9 @@ module Jekyll::UlyssesZhan
 	end
 end
 
-module Jekyll::Cothlory
-
-end
-
 module Jekyll
-    module Cothlory::Filters
 
-    end
-
+	# This module is licensed under MIT License, (c) 2023 Ulysses Zhan
 	module UlyssesZhan::Filters
 
 		def markdownify input

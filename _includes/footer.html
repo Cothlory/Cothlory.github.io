@@ -28,11 +28,20 @@
         </ul>
       {%- endif %}
       </div>
-      <div class="social-links">
+      <div class="footer-col footer-col-2 social-links">
         {%- include social.html -%}
       </div>
-      <div class="footer-col">
+      <div class="footer-col footer-col-3">
         {% include copyright.html %}
+
+        <div class="update-info"></div>
+          {% if site.github_run_id %}
+              <a href="{{ site.git_repo }}/actions/runs/{{ site.github_run_id }}" target="_blank" rel="external">Build</a>
+              {{ "now" | date: "%FT%T%z" }}<br>
+          {% endif %}
+          <a href="{{ site.git_repo }}/commit/{{ site.commit_hash }}" target="_blank" rel="external">Commit</a>
+          {{ site.commit_time | date: "%FT%T%z" }}
+        </div>
       </div>
     </div>
 

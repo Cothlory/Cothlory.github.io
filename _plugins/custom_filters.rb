@@ -9,7 +9,6 @@ module Jekyll::UlyssesZhan
 end
 
 module Jekyll
-
 	# This module is licensed under MIT License, (c) 2023 Ulysses Zhan
 	module UlyssesZhan::Filters
 

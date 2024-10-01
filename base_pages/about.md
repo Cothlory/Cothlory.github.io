@@ -4,4 +4,4 @@ title: About
 permalink: "/about/"
 ---
 
-A backup place for Cothlory's miscellaneous stuff that is still under construction. Contact me if you want to know more about me.
+A still under construction backup place for my miscellaneous mind and stuff. Contact me if you want to know more about me.

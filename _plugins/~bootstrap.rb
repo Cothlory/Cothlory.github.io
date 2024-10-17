@@ -1,6 +1,5 @@
 require 'fileutils'
 require 'yaml'
-require 'tomlib'
 # This module is licensed under MIT License, (c) 2023 Ulysses Zhan
 module Jekyll::UlyssesZhan
 end

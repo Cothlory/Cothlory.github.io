@@ -34,13 +34,13 @@
       <div class="footer-col footer-col-3">
         {% include copyright.html %}
 
-        <div class="update-info"></div>
+        <div class="update-info">
           {% if site.github_run_id %}
-              <a href="{{ site.git_repo }}/actions/runs/{{ site.github_run_id }}" target="_blank" rel="external">Build</a>
-              {{ "now" | date: "%FT%T%z" }}<br>
+              <a href="{{ site.git_repo }}/actions/runs/{{ site.github_run_id }}" target="_blank" rel="external">Last build</a>
+              {{ "now" | date: "%F %T%z" }}<br>
           {% endif %}
-          <a href="{{ site.git_repo }}/commit/{{ site.commit_hash }}" target="_blank" rel="external">Commit</a>
-          {{ site.commit_time | date: "%FT%T%z" }}
+          <a href="{{ site.git_repo }}/commit/{{ site.commit_hash }}" target="_blank" rel="external">Last commit</a>
+          {{ site.commit_time | date: "%F %T%z" }}
         </div>
       </div>
     </div>

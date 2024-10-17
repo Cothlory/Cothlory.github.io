@@ -232,7 +232,11 @@
   @include relative-font-size(1.5);
 }
 
-
+.update-info {
+  font-size: 10px;
+  color: $brand-color;
+  text-align: right;
+}
 
 /**
  * Posts

@@ -359,3 +359,31 @@ $table-border-color: $lm-table-border-color;
   @include lm-highlight;
 
 }
+
+a[rel~=external] {
+	&::after {
+		content: "\2197\fe0e"; // shown in case mask-image not supported
+		display: inline-block;
+		background-color: $link-base-color;
+		width: 0.7em;
+
+		--image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 1h5v5L8.86 3.85 4.7 8 4 7.3l4.15-4.16L6 1Z M2 3h2v1H2v6h6V8h1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /></svg>');
+		mask-image: var(--image);
+		-webkit-mask-image: var(--image);
+		mask-size: contain;
+		-webkit-mask-size: contain;
+		mask-repeat: no-repeat;
+		-webkit-mask-repeat: no-repeat;
+		mask-position: left 25%;
+		-webkit-mask-position: left 25%;
+	}
+	&:visited::after {
+		background-color: $link-visited-color;
+	}
+	&:hover::after {
+		background-color: $link-hover-color;
+	}
+}
+a:local-link {
+	color: $brand-color;
+}

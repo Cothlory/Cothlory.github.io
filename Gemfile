@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4"
+ruby "4.0.5"
+
+gem "jekyll", "~> 4.4"
 
 gem "minima", github: "jekyll/minima", ref: 'master'
 

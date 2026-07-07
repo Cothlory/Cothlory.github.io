@@ -53,3 +53,7 @@ exclude:
   - .git/
   - .github/
   - '**/*.yml'
+
+sass:
+  silence_deprecations:
+    - import
